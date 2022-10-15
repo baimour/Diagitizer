@@ -1,37 +1,36 @@
-#  Diagitizer - Diags booting utility
+#  Diagitizer - 诊断启动程序
 
-PLEASE NOTE THAT WE WON'T PROVIDE THE DIAGNOSTIC FILES! YOU CAN GRAB THEM FROM PURPLE TOOL BY @1nsane_dev
+请注意，我们不会提供诊断文件！您可以从@1nsane_dev 的紫色工具中获取它们
 
-Features:
-+ Setting usbserial bootarg automatically on bootup
-+ One click booting diags (after correct setup)
+特点：
++ 在启动时自动设置 usbserial bootarg
++ 一键启动诊断（正确设置后）
 
 
-Usage:
+用法：
 
-Place the bootchain in ~/Documents/diagitizer_bootchain/
+将引导链放在 ~/Documents/diagitizer_bootchain/
 
-If you use the bootchain of Purple, you may need to edit file named.
-The DeviceModel values you can look up in TheiPhoneWiki and in supportedDevices.json
+如果您使用 Purple 的引导链，您可能需要编辑文件名
+您可以在 TheiPhoneWiki 和 supportedDevices.json 中查找的 DeviceModel 值
 
-A valid bootchain set looks like that:
+一个完整有效的引导链如下所示：
 
 
 - iBSS.DeviceModel.img4
 - iBoot.DeviceModel.img4
 - diag.DeviceModel.img4
 
-Example for iPhone X Model D221:
+iPhone X 型号 D221 的示例：
 - iBSS.D221.img4
 - iBoot.D221.img4
 - diag.D221.img4
 
 
-If there are only an iBoot and diags file, you need to create the iBSS file and place DEADBEEF bytes to it.
-It should look like this:
+如果只有 iBoot 和 diags 文件，则需要创建 iBSS 文件并将 DEADBEEF 字节放入其中。它应该如下所示：
 
 ![Image of DEEDBEED](https://github.com/j4nf4b3l/Diagitizer-Open-Source/blob/master/DEADBEEF_Example.png)
 
-If you add a new model, you need to modify supportedDevices.json and add the missing information...
+如果添加新模型，则需要修改supportedDevices.json并添加缺少的信息
 
-This tool is under MIT License, so feel free to contribute and modify like you want :)
+这个工具在 MIT 许可下，所以随意贡献和修改你想要的 :)
